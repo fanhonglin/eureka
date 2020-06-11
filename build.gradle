@@ -1,5 +1,13 @@
 buildscript {
-    repositories { jcenter() }
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url "http://repo.springsource.org/plugins-release" }
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
 
     dependencies {
         classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.+'
@@ -49,6 +57,16 @@ allprojects {
         mockitoVersion = '1.10.19'
         mockserverVersion = '3.9.2'
     }
+
+    repositories{
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url "http://repo.springsource.org/plugins-release" }
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
 }
 
 subprojects {
@@ -61,6 +79,12 @@ subprojects {
     targetCompatibility = 1.8
 
     repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url "http://repo.springsource.org/plugins-release" }
+        mavenLocal()
+        mavenCentral()
         jcenter()
     }
 
